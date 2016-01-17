@@ -1,0 +1,91 @@
+
+Git Cheat Sheet
+
+Git Basics
+git initInitialize a repository
+git statusShow status of working tree
+git add file.txtStart tracking file.txt
+git add main.txtStage modified file main.txt
+git diffShow what's changed but not yet staged
+git commitCommit changes
+git commit -aStage files and commit
+git mv main.txt file.txtRename main.txt to file.txt
+git fetch developPull data from remote 'develop' without merging
+git pull origin developFetch and merge branch 'develop' from origin
+git clone urlCreate local copy of remote repository at 'url'
+Branching
+git branchShow current branches
+git push origin masterPush master branch to origin server
+git branch -vShow last commit on all branches
+git checkout masterSwitch to branch 'master'
+git branch feature1Create new branch called 'feature1'
+git checkout -b feature2Create branch 'feature2' and switch to it
+git branch -d mybranchDelete branch 'mybranch'
+git branch --mergedShow branches already merged into current branch
+git branch --no-mergedShow branches not yet merged into current branch
+git branch -D fixForce delete branch 'fix' that is not yet merged
+git push origin feature1Push local branch 'feature1' to origin
+git push staging develop:masterPush develop branch to remote staging master
+git checkout -b fix1 origin/fix1Create local branch 'fix1' based off origin branch
+git checkout --track origin/fix2Create tracking branch 'fix2' based off origin
+git push origin :fix2Delete remote branch 'fix2' from origin
+Merging / Rebasing
+git mergetoolUse graphical merge tool
+git commitFinalize merge after resolving conflicts
+git merge feature1Merge branch 'feature1' with current branch
+git add file.txtMark file.txt as resolved after merge
+git rebase developRebase changes made on current branch over develop
+git rebase master developRebase master onto develop without checking it out
+git rebase --onto master 1a 1bRebase master onto branch 1b made from branch 1a
+Remotes
+git remoteShow remote servers you have configured
+git remote -vShow remote servers with URL displayed
+git remote add myurl urlAdd remote server 'url' with shortname 'myurl'
+git remote rename server1 server2Rename remote 'server1' to 'server2'
+git remote rm server1Remove remote 'server1'
+git remote show originShow info about remote origin
+Commit Logs
+git logShow commit logs
+git log -p -2Show last two commits with diffs
+git log --statShow commit logs with stats
+git log --pretty=onelineShow commit logs one per line
+git log --graphShow commit logs with ascii graph
+git log --since=1.weekShow commit log for the last week
+git blame -L 10,15 file.rbShow prev commits for each lines 10-15 of file.rb
+Undo / Change History
+git rm --cached main.txtRemove main.txt from staging but keep in working
+git commit --amendReplace last commit with whats in staging
+git checkout -- file.txtDiscard changes to file.txt
+git reset HEAD file.txtUnstage file.txt
+git commit --amendModify last commit message
+git rebase -i HEAD~3Make changes to the last 3 commits
+Using Tags
+git tagShow available tags
+git tag -a v3.0Create annotated tag 'v3.0'
+git show v3.0Show info for tag v3.0
+git tag -s v3.0Create signed tag v3.0
+git tag v2.1-lwCreate lightweight tag v2.1
+git tag -v v3.0Verify signed tag v3.0
+git tag -a v2.2 8febTag previous commit '8feb' as v2.2
+git push origin v2.2Push tag v2.2 to origin
+git push origin --tagsPush all local tags to origin
+Using Stashes
+git stashStash changes without committing
+git stash listShow stores stashes
+git stash applyReapply most recent stash
+git stash apply stash@2Reapply stash 2
+git stash apply --indexReapply stashed changes along with staged changes
+git stash drop stash@{2}Drop stash 2
+git stash popApply most recent stash and drop from stack
+git stash branch mybranchCreate branch 'mybranch' from stash
+git stash clearDelete all stashes
+git diff --stagedShow what's staged but not yet committed
+git diff --checkCheck for whitespace errors before committing
+Using Bisect
+git bisect startStart binary search of commits to find bad commit
+git bisect badMark current commit as broken during bisect
+git bisect good v2.2Mark v2.2 as last known good commit during bisect
+git bisect goodMark current commit as good during bisect
+git bisect resetReset HEAD when finished with bisect
+git bisect run test.shRun 'test.sh' on each commit during bisect
+

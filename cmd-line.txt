@@ -1,0 +1,82 @@
+
+Command Line Cheat Sheet
+< Back to Dojo
+System Basic
+dateShow date and time
+uptimeDisplay system uptime
+calShow calendar
+wDisplay who is logged in
+whoamiDisplay effective username
+finger userShow info about user
+uname -aShow kernel info
+man cmdShow man page for cmd
+dfDisplay free disk space
+duDisplay disk usage stats
+freeShow memory and swap usage
+whereis appShow where app location is
+which appShow which app
+Directories Basic
+ls -lList current dir contents (long format)
+lsList current dir contents
+ls -aList current dir contents including hidden
+ls -tList current dir contents sorted by mod date
+cdChange to home dir
+cd dirChange to directory 'dir'
+pwdShow current directory
+mkdir dirMake directory 'dir'
+rm -r dirRemove directory 'dir'
+rm -rf dirRemove directory 'dir' (force)
+cp -r dir1 dir2Copy 'dir1' to 'dir2'
+cd -Change to previous working dir
+Files Basic
+rm fileRemove 'file'
+rm -f fileRemove 'file' (force)
+cp file1 file2Copy 'file1' to 'file2'
+mv file1 file2Rename or move file1 to file2
+ln -s file1 link1Create symbolic 'link1' to 'file1'
+touch fileCreate or update 'file'
+cat>filePut standard output into 'file'
+more fileOutput file 'file'
+head fileOutput first 10 lines of 'file'
+tail fileOutput last 10 lines of 'file'
+tail -f fileOutput 'file' as it grows
+Search Basic
+grep pattern filesSearch for 'pattern' in 'files'
+grep -r pattern dirSearch recursively for 'pattern' in dir
+cmd | grep patternSearch for 'pattern' in output of cmd
+locate fileFind file names quickly
+Shortcuts
+ctrl+cHalt current command
+ctrl+zBackground current command
+ctrl+dDelete char infront of cursor or logout
+ctrl+uErase line
+ctrl+rSearch recent commands
+ctrl+aMove to beginning of line
+ctrl+eMove to end of line
+ctrl+hDelete char behind cursor (backspace)
+UPMove to previous command
+DOWNMove to next command
+Processes
+psDisplay your active processes
+topDisplay all processes
+kill 5Terminate process id of 5
+kill -9 5Terminate (KILL) process id of 5
+killall procTerminate all processes named 'proc'
+bgList background jobs
+fgBring most recent job to foreground
+fg 2Bring job 2 to foreground
+Command History
+!!Repeat last command
+sudo !!Repeat last command as root
+UPMove to previous command
+DOWNMove to next command
+!3Execute command 3 in history
+historyShow command history
+Compression
+tar cf file.tar filesCreate a tar 'file.tar' with 'files'
+tar xf file.tarExtract files from 'file.tar'
+tar czf file.tar.gz filesCreate tar with gzip compression
+tar xzf file.tar.gzExtract files from file.tar.gz
+gzip fileCompress 'file' with gzip
+gzip -d file.gzDecompress file.gz
+
